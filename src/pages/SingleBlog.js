@@ -13,7 +13,7 @@ const SingleBlog = () => {
 
     return (
         <div className="px-8">
-            <h1 className="text-4xl font-bold my-8 text-center text-gray-500">{post.title}</h1>
+            <h1 className="text-4xl font-bold py-24 text-center text-gray-500">{post.title}</h1>
             {post.photo && <img src={post.photo} alt={post.title} className="w-full h-80 mt-8 mb-2 object-cover" />}
             <p className="text-lg font-semibold my-8">{post.description}</p>
         </div>
