@@ -7,7 +7,7 @@ const Register = () => {
     const history = useHistory();
 
     const onSubmit = data => {
-        fetch('http://localhost:5000/api/auth/register', {
+        fetch('https://secret-coast-88373.herokuapp.com/api/auth/register', {
             method: 'POST',
             headers:{'content-type':"application/json"},
             body: JSON.stringify(data)
@@ -18,7 +18,7 @@ const Register = () => {
     return (
         <React.Fragment>
             <div className="w-full md:w-9/12 lg:w-1/2 mx-auto">
-                <h2 className="text-2xl font-bold text-center my-6">Register Here</h2>
+                <h2 className="text-2xl font-bold text-center py-24">Register Here</h2>
                 <form 
                     className="px-2 md:px-10"
                     onSubmit={handleSubmit(onSubmit)}

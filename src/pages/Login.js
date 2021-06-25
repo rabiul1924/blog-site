@@ -9,7 +9,7 @@ const Login = () => {
     const onSubmit = data => {
         dispatch({ type: "LOGIN_START" });
         try {
-            fetch('http://localhost:5000/api/auth/login', {
+            fetch('https://secret-coast-88373.herokuapp.com/api/auth/login', {
                 method: 'POST',
                 headers: { 'content-type': "application/json" },
                 body: JSON.stringify(data)
@@ -25,7 +25,7 @@ const Login = () => {
     return (
         <React.Fragment>
             <div className="w-full md:w-9/12 lg:w-1/2 mx-auto">
-                <h2 className="text-2xl font-bold text-center my-6">Login Here</h2>
+                <h2 className="text-2xl font-bold text-center py-24">Login Here</h2>
                 <form
                     className="px-2 md:px-10"
                     onSubmit={handleSubmit(onSubmit)}

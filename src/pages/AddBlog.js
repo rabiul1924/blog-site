@@ -21,9 +21,10 @@ const AddBlog = () => {
     const onSubmit = data => {
         if (photo !== null) {
             const email = user.email;
-            const productData = { photo, ...data, email };
+            const date = new Date().toDateString();
+            const productData = { photo, ...data, email, date};
 
-            fetch('http://localhost:5000/api/posts', {
+            fetch('https://secret-coast-88373.herokuapp.com/api/posts', {
                 method: "POST",
                 headers: { "Content-type": 'application/json' },
                 body: JSON.stringify(productData)
@@ -36,7 +37,7 @@ const AddBlog = () => {
     return (
         <React.Fragment>
             <div className="w-full px-2 md:px-8">
-                <h2 className="text-2xl font-bold text-center my-6">Publish Your Blog Here</h2>
+                <h2 className="text-2xl font-bold text-center py-24">Publish Your Blog Here</h2>
                 <form
                     className="px-2 md:px-10"
                     onSubmit={handleSubmit(onSubmit)}

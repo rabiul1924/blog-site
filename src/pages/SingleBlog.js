@@ -6,7 +6,7 @@ const SingleBlog = () => {
     const [post, setPost] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/posts/${id}`)
+        fetch(`https://secret-coast-88373.herokuapp.com/api/posts/${id}`)
             .then(res => res.json())
             .then(data => setPost(data))
     }, [id])

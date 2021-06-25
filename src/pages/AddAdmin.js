@@ -5,7 +5,7 @@ const AddAdmin = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        fetch('http://localhost:5000/api/admin/addAdmin', {
+        fetch('https://secret-coast-88373.herokuapp.com/api/admin/addAdmin', {
             method: 'POST',
             headers: { 'content-type': "application/json" },
             body: JSON.stringify(data)
@@ -16,7 +16,7 @@ const AddAdmin = () => {
     return (
         <React.Fragment>
             <div className="w-full md:w-9/12 lg:w-1/2 mx-auto">
-                <h2 className="text-2xl font-bold text-center my-6">Add Admin Here</h2>
+                <h2 className="text-2xl font-bold text-center py-24">Add Admin Here</h2>
                 <form
                     className="px-2 md:px-10"
                     onSubmit={handleSubmit(onSubmit)}
